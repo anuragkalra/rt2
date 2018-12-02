@@ -39,6 +39,7 @@ public class Scene {
         Camera cam = render.camera; 
         int w = cam.imageSize.width;
         int h = cam.imageSize.height;
+        double[] offset = {0.0, 0.0};
         
         render.init(w, h, showPanel);
         
@@ -46,6 +47,9 @@ public class Scene {
             for ( int j = 0; j < w && !render.isDone(); j++ ) {
             	
                 // TODO: Objective 1: generate a ray (use the generateRay method)
+            	
+            	Ray ray = new Ray();
+            	generateRay(i, j, offset, cam, ray);
             	
                 // TODO: Objective 2: test for intersection with scene surfaces
             	

@@ -59,6 +59,11 @@ public class Render extends WindowAdapter {
     /** Flag to indicate when rendering should stop */
     private boolean done;
     
+    /*
+     * Objective 8: Anti-Aliasing and Super-Sampling
+     */
+    public boolean jitter;
+    
     /**
      * Default constructor. Creates a default camera and black background color.
      * @param dataNode
